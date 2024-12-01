@@ -21,6 +21,7 @@
     "node": ">=18"
   },
   "prettier": {
-    "semi": false
+    "semi": false,
+    "arrowParens": "avoid"
   }
 }
