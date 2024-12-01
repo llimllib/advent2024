@@ -1,7 +1,7 @@
 // See https://observablehq.com/framework/config for documentation.
 export default {
   // The project’s title; used in the sidebar and webpage titles.
-  title: "Adventofcode 2024",
+  title: "Advent of Code 2024",
 
   // The pages and sections in the sidebar. If you don’t specify this option,
   // all pages will be listed in alphabetical order. Listing pages explicitly
@@ -25,4 +25,4 @@ export default {
   // root: "docs", // path to the source root for preview
   // output: "dist", // path to the output root for build
   // search: true, // activate search
-};
+}
