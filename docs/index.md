@@ -48,7 +48,7 @@ toc: false
 <div class="hero">
   <h1>Advent of code 2024</h1>
 
-<h2>Advent of code 2024 solutions:</h2>
+<h2><a href="https://adventofcode.com/">Advent of code</a> 2024 solutions:</h2>
 
 - [day 1](/01)
 </div>
