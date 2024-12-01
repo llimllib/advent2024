@@ -40,6 +40,8 @@ display(munge("1234   4576\n9999      12345\n12bananas\t5555"))
 
 For a given day, run `munge` on the input file for that day. The files array is due to [a restriction](https://observablehq.com/framework/files) in observable framework that files must be statically defined, so it can figure out what to import.
 
+Unfortunately, it seems like I'll need to uncomment each day as I go; annoying but oh well.
+
 ```js echo
 async function inputDay(dayN) {
   // in observable, files must be explicit strings. So let's allocate a list of
@@ -48,30 +50,30 @@ async function inputDay(dayN) {
   const inputs = [
     null,
     FileAttachment("./input/01.txt"),
-    FileAttachment("./input/02.txt"),
-    FileAttachment("./input/03.txt"),
-    FileAttachment("./input/04.txt"),
-    FileAttachment("./input/05.txt"),
-    FileAttachment("./input/06.txt"),
-    FileAttachment("./input/07.txt"),
-    FileAttachment("./input/08.txt"),
-    FileAttachment("./input/09.txt"),
-    FileAttachment("./input/10.txt"),
-    FileAttachment("./input/11.txt"),
-    FileAttachment("./input/12.txt"),
-    FileAttachment("./input/13.txt"),
-    FileAttachment("./input/14.txt"),
-    FileAttachment("./input/15.txt"),
-    FileAttachment("./input/16.txt"),
-    FileAttachment("./input/17.txt"),
-    FileAttachment("./input/18.txt"),
-    FileAttachment("./input/19.txt"),
-    FileAttachment("./input/20.txt"),
-    FileAttachment("./input/21.txt"),
-    FileAttachment("./input/22.txt"),
-    FileAttachment("./input/23.txt"),
-    FileAttachment("./input/24.txt"),
-    FileAttachment("./input/25.txt"),
+    // FileAttachment("./input/02.txt"),
+    // FileAttachment("./input/03.txt"),
+    // FileAttachment("./input/04.txt"),
+    // FileAttachment("./input/05.txt"),
+    // FileAttachment("./input/06.txt"),
+    // FileAttachment("./input/07.txt"),
+    // FileAttachment("./input/08.txt"),
+    // FileAttachment("./input/09.txt"),
+    // FileAttachment("./input/10.txt"),
+    // FileAttachment("./input/11.txt"),
+    // FileAttachment("./input/12.txt"),
+    // FileAttachment("./input/13.txt"),
+    // FileAttachment("./input/14.txt"),
+    // FileAttachment("./input/15.txt"),
+    // FileAttachment("./input/16.txt"),
+    // FileAttachment("./input/17.txt"),
+    // FileAttachment("./input/18.txt"),
+    // FileAttachment("./input/19.txt"),
+    // FileAttachment("./input/20.txt"),
+    // FileAttachment("./input/21.txt"),
+    // FileAttachment("./input/22.txt"),
+    // FileAttachment("./input/23.txt"),
+    // FileAttachment("./input/24.txt"),
+    // FileAttachment("./input/25.txt"),
   ]
   return munge(await inputs[dayN].text())
 }
