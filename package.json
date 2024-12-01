@@ -14,9 +14,13 @@
     "d3-time-format": "^4.1.0"
   },
   "devDependencies": {
+    "prettier": "^3.4.1",
     "rimraf": "^5.0.5"
   },
   "engines": {
     "node": ">=18"
+  },
+  "prettier": {
+    "semi": false
   }
 }
