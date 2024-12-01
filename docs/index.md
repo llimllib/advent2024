@@ -52,3 +52,5 @@ toc: false
 
 - [day 1](/01)
 </div>
+
+Source code for all documents: https://github.com/llimllib/advent2024
