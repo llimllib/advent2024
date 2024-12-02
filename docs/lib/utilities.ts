@@ -1,7 +1,7 @@
 //@ts-expect-error not sure how to make this accessible to ts
 import { FileAttachment } from "observablehq:stdlib"
 
-function maybeNumber(str: string) {
+export function maybeNumber(str: string) {
   // Number("") is 0, so special-case return ""
   if (str == "") {
     return str
@@ -10,7 +10,7 @@ function maybeNumber(str: string) {
   return isNaN(val) ? str : val
 }
 
-function munge(str: string) {
+export function munge(str: string) {
   return str
     .trim()
     .split("\n")
