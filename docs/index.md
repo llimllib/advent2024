@@ -51,6 +51,7 @@ toc: false
 <h2><a href="https://adventofcode.com/">Advent of code</a> 2024 solutions:</h2>
 
 - [day 1](/01)
+- [day 2](/02)
 </div>
 
 Source code for all documents: https://github.com/llimllib/advent2024
