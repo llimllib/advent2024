@@ -1,8 +1,9 @@
 //@ts-expect-error not sure how to make this accessible to ts
 import { FileAttachment } from "observablehq:stdlib"
 
+/** parse a string to a number if possible */
 export function maybeNumber(str: string) {
-  // Number("") is 0, so special-case return ""
+  // +"" is 0, so special-case return ""
   if (str == "") {
     return str
   }
@@ -51,6 +52,11 @@ export async function inputDay(dayN: number) {
   return munge(await inputs[dayN].text())
 }
 
-export function transpose(matrix: Number[][]) {
+export function transpose(matrix: number[][]) {
   return matrix[0].map((_, i) => matrix.map(row => row[i]))
+}
+
+/** return a new array without element `i` */
+export function cut(arr: any[], i: number) {
+  return arr.slice(0, i).concat(arr.slice(i + 1, arr.length))
 }
