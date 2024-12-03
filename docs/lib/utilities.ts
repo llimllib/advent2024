@@ -18,7 +18,8 @@ export function munge(str: string) {
     .map(line => line.split(/\s+/).map(maybeNumber))
 }
 
-export async function inputDay(dayN: number) {
+export async function inputDay(dayN: number, options: { parser?: any } = {}) {
+  const parser = options.parser || munge
   // in observable, files must be explicit strings. So let's allocate a list of
   // our 25 days' input files
   const inputs = [
@@ -49,7 +50,7 @@ export async function inputDay(dayN: number) {
     FileAttachment("../input/24.txt"),
     FileAttachment("../input/25.txt"),
   ]
-  return munge(await inputs[dayN].text())
+  return parser(await inputs[dayN].text())
 }
 
 export function transpose(matrix: number[][]) {
