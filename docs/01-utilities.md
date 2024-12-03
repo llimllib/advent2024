@@ -40,11 +40,11 @@ display(munge("1234   4576\n9999      12345\n12bananas\t5555"))
 
 For a given day, run `munge` on the input file for that day. The files array is due to [a restriction](https://observablehq.com/framework/files) in observable framework that files must be statically defined, so it can figure out what to import.
 
-_updated_: day 3, added the parse option so you can pass in a parser
+_updated_: day 3, added the `parser` option so you can pass in a parser
 
 ```js echo
 async function inputDay(dayN, options = {}) {
-  const parse = options.parse || munge
+  const parser = options.parser || munge
   // in observable, files must be explicit strings. So let's allocate a list of
   // our 25 days' input files. Skip zero so we can say inputDay(1) on the first
   // day
@@ -76,7 +76,7 @@ async function inputDay(dayN, options = {}) {
     FileAttachment("./input/24.txt"),
     FileAttachment("./input/25.txt"),
   ]
-  return parse(await inputs[dayN].text())
+  return parser(await inputs[dayN].text())
 }
 
 display(await inputDay(1))
