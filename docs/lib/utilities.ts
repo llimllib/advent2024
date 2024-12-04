@@ -53,8 +53,21 @@ export async function inputDay(dayN: number, options: { parser?: any } = {}) {
   return parser(await inputs[dayN].text())
 }
 
-export function transpose(matrix: number[][]) {
+export function transpose(matrix: any[][]) {
   return matrix[0].map((_, i) => matrix.map(row => row[i]))
+}
+
+/** rotate the matrix 90* clockwise */
+export function rotate(matrix: any[][]) {
+  const width = matrix[0].length
+  return transpose(matrix).map(row => row.map((_, col) => row[width - col - 1]))
+}
+
+/** convert a string to a matrix, rotate it, then join it back up */
+export function rotateString(s: string) {
+  return rotate(s.split("\n").map(row => row.split("")))
+    .map(row => row.join(""))
+    .join("\n")
 }
 
 /** return a new array without element `i` */
