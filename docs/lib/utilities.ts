@@ -11,11 +11,17 @@ export function maybeNumber(str: string) {
   return isNaN(val) ? str : val
 }
 
+/** parse an input into lines and parse as many numbers as possible */
 export function munge(str: string) {
   return str
     .trim()
     .split("\n")
     .map(line => line.split(/\s+/).map(maybeNumber))
+}
+
+/** parse an input into a grid with one char per cell */
+export function grid(str: string) {
+  return str.split("\n").map(row => row.split(""))
 }
 
 export async function inputDay(dayN: number, options: { parser?: any } = {}) {
