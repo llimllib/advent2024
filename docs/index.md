@@ -52,6 +52,9 @@ toc: false
 
 - [day 1](/01)
 - [day 2](/02)
+- [day 3](/03)
+- [day 4](/04)
+- [day 5](/05)
 </div>
 
 Source code for all documents: https://github.com/llimllib/advent2024
