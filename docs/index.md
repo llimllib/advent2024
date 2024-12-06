@@ -16,9 +16,9 @@ toc: false
 }
 
 .hero h1 {
-  margin: 2rem 0;
+  margin: .2rem 0;
   max-width: none;
-  font-size: 14vw;
+  font-size: 7vw;
   font-weight: 900;
   line-height: 1;
   background: linear-gradient(30deg, var(--theme-foreground-focus), currentColor);
@@ -47,14 +47,15 @@ toc: false
 
 <div class="hero">
   <h1>Advent of code 2024</h1>
+</div>
 
-<h2><a href="https://adventofcode.com/">Advent of code</a> 2024 solutions:</h2>
+<a href="https://adventofcode.com/">Advent of code</a> 2024 solutions:</h2>
 
 - [day 1](/01)
 - [day 2](/02)
 - [day 3](/03)
 - [day 4](/04)
 - [day 5](/05)
-</div>
+- [day 6](/06)
 
 Source code for all documents: https://github.com/llimllib/advent2024
