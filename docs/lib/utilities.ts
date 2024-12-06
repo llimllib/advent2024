@@ -20,8 +20,11 @@ export function munge(str: string) {
 }
 
 /** parse an input into a grid with one char per cell */
-export function grid(str: string) {
-  return str.split("\n").map(row => row.split(""))
+export function grid(input: string) {
+  return input
+    .trim()
+    .split("\n")
+    .map(row => row.split(""))
 }
 
 export async function inputDay(dayN: number, options: { parser?: any } = {}) {
