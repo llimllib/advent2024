@@ -51,11 +51,12 @@ toc: false
 
 <a href="https://adventofcode.com/">Advent of code</a> 2024 solutions:</h2>
 
-- [day 1](/01)
-- [day 2](/02)
-- [day 3](/03)
-- [day 4](/04)
-- [day 5](/05)
-- [day 6](/06)
+- [Day 1](/01)
+- [Day 2](/02)
+- [Day 3](/03)
+- [Day 4](/04)
+- [Day 5](/05)
+- [Day 6](/06)
+- [Day 7](/07)
 
 Source code for all documents: https://github.com/llimllib/advent2024
