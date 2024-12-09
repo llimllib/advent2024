@@ -83,3 +83,14 @@ export function rotateString(s: string) {
 export function cut(arr: any[], i: number) {
   return arr.slice(0, i).concat(arr.slice(i + 1, arr.length))
 }
+
+/** clone a 2d matrix */
+export function clone(m: any[][]) {
+  return m.map(x => x.slice())
+}
+
+/** return an array of integers from start to end */
+export function range(start: number, end: number) {
+  if (end <= start) return []
+  return [...Array(end - start)].map((_, i) => i + start)
+}
