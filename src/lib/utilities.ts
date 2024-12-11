@@ -92,5 +92,6 @@ export function clone(m: any[][]) {
 /** return an array of integers from start to end */
 export function range(start: number, end: number) {
   if (end <= start) return []
+  if (end === undefined) return [...Array(start)].map((_, i) => i)
   return [...Array(end - start)].map((_, i) => i + start)
 }
