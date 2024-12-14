@@ -16,7 +16,7 @@ export function munge(str: string) {
   return str
     .trim()
     .split("\n")
-    .map(line => line.split(/[\s:,]+/).map(maybeNumber))
+    .map(line => line.split(/[\s:,=]+/).map(maybeNumber))
 }
 
 /** parse an input into a grid with one char per cell */
