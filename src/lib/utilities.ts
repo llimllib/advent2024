@@ -95,3 +95,60 @@ export function range(start: number, end: number) {
   if (end === undefined) return [...Array(start)].map((_, i) => i)
   return [...Array(end - start)].map((_, i) => i + start)
 }
+
+/** find a symbol in a 2d array or throw */
+export function find(map: string[][], symbol: string) {
+  for (let row = 0; row < map.length; row++) {
+    for (let col = 0; col < map[0].length; col++) {
+      if (map[row][col] == symbol) return [row, col]
+    }
+  }
+  throw new Error(`Unable to find ${symbol}`)
+}
+
+type vector2d = [number, number]
+
+/** distance for 2d vectors */
+export function distance(v1: vector2d, v2: vector2d) {
+  return Math.abs(v1[0] - v2[0]) + Math.abs(v1[1] - v2[1])
+}
+
+/** equality for 2d vectors */
+export function eq(v1: vector2d, v2: vector2d) {
+  return v1[0] == v2[0] && v1[1] == v2[1]
+}
+
+/** addition of 2d vectors */
+export function add(pt: vector2d, dir: vector2d) {
+  return [pt[0] + dir[0], pt[1] + dir[1]]
+}
+
+export class HashMap extends Map {
+  constructor(entries: [[any, any]]) {
+    super()
+    entries?.map(([e, v]) => this.set(this.hash(e), v))
+  }
+
+  hash(key: any) {
+    if (Array.isArray(key)) {
+      return key.join(",")
+    }
+    return key
+  }
+
+  set(key: any, value: any) {
+    return super.set(this.hash(key), value)
+  }
+
+  get(key: any) {
+    return super.get(this.hash(key))
+  }
+
+  has(key: any) {
+    return super.has(this.hash(key))
+  }
+
+  delete(key: any) {
+    return super.delete(this.hash(key))
+  }
+}
